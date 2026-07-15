@@ -1,0 +1,278 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#E4E3E3;
+    min-height:100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    background:#000511;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+}
+
+.nav-logo img{
+    width:200px;
+    height:60px;
+    object-fit:contain;
+}
+
+.address{
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.address:hover{
+    color:#FACC15;
+}
+
+.nav-search{
+    width:500px;
+    height:40px;
+    display:flex;
+}
+
+.search-input{
+    width:100%;
+    border:none;
+    outline:none;
+    padding-left:15px;
+    background:#1A1C21;
+    color:white;
+    border-radius:8px 0 0 8px;
+}
+
+.search-btn{
+    width:50px;
+    border:none;
+    background:#FACC15;
+    cursor:pointer;
+    border-radius:0 8px 8px 0;
+}
+
+.cart{
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.cart:hover{
+    color:#FACC15;
+}
+
+#cart-count{
+    width:18px;
+    height:18px;
+    background:#FACC15;
+    color:black;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* =========================
+   PANEL
+========================= */
+
+.panel{
+    background:#000511;
+    height:50px;
+    display:flex;
+    align-items:center;
+    gap:40px;
+    padding-left:40px;
+}
+
+.menu-item{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.menu-item:hover{
+    color:#FACC15;
+}
+
+/* =========================
+   SIGN IN SECTION
+========================= */
+
+.signin-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
+
+.signin-box{
+    width:100%;
+    max-width:450px;
+    background:white;
+    border-radius:15px;
+    padding:40px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.signin-box h1{
+    text-align:center;
+    color:#000511;
+    margin-bottom:30px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#333;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+.input-group input:focus{
+    border-color:#FACC15;
+}
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.options a{
+    text-decoration:none;
+    color:#000511;
+}
+
+.options a:hover{
+    color:#FACC15;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.signin-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#FACC15;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    margin-bottom:15px;
+}
+
+.signin-btn:hover{
+    opacity:0.9;
+}
+
+.create-btn{
+    width:100%;
+    padding:14px;
+    border:2px solid #FACC15;
+    border-radius:8px;
+    background:white;
+    color:#000511;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.create-btn:hover{
+    background:#FACC15;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#000511;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        height:auto;
+        padding:15px;
+        gap:15px;
+    }
+
+    .nav-search{
+        width:100%;
+    }
+
+    .panel{
+        justify-content:center;
+        padding-left:0;
+    }
+
+    .signin-box{
+        padding:25px;
+    }
+}
+
+@media(max-width:480px){
+
+    .nav-logo img{
+        width:150px;
+    }
+
+    .options{
+        flex-direction:column;
+        gap:10px;
+    }
+}
