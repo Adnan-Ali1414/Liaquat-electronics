@@ -2,7 +2,7 @@
    GLOBAL
 ========================= */
 
-*{
+/* *{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -12,13 +12,13 @@
 body{
     background:#E4E3E3;
     min-height:100vh;
-}
+} */
 
 /* =========================
    NAVBAR
 ========================= */
 
-.navbar{
+/* .navbar{
     background:#000511;
     height:80px;
     display:flex;
@@ -92,13 +92,13 @@ body{
     align-items:center;
     font-size:12px;
     font-weight:bold;
-}
+} */
 
 /* =========================
    PANEL
 ========================= */
 
-.panel{
+/* .panel{
     background:#000511;
     height:50px;
     display:flex;
@@ -121,7 +121,7 @@ body{
    SIGN IN SECTION
 ========================= */
 
-.signin-section{
+/* .signin-section{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -141,13 +141,13 @@ body{
     text-align:center;
     color:#000511;
     margin-bottom:30px;
-}
+} */ */
 
 /* =========================
    FORM
 ========================= */
 
-.input-group{
+/* .input-group{
     margin-bottom:20px;
 }
 
@@ -168,13 +168,13 @@ body{
 
 .input-group input:focus{
     border-color:#FACC15;
-}
+} */
 
 /* =========================
    OPTIONS
 ========================= */
 
-.options{
+/* .options{
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -189,13 +189,13 @@ body{
 
 .options a:hover{
     color:#FACC15;
-}
+} */
 
 /* =========================
    BUTTONS
 ========================= */
 
-.signin-btn{
+/* .signin-btn{
     width:100%;
     padding:14px;
     border:none;
@@ -224,25 +224,25 @@ body{
 
 .create-btn:hover{
     background:#FACC15;
-}
+} */
 
 /* =========================
    FOOTER
 ========================= */
 
-.footer{
+/* .footer{
     background:#000511;
     color:white;
     text-align:center;
     padding:25px;
     margin-top:50px;
-}
+} */
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
     .navbar{
         flex-direction:column;
@@ -275,4 +275,18 @@ body{
         flex-direction:column;
         gap:10px;
     }
+} */
+.signin-box{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(192,192,192,0.6);
+    z-index: 1000;
+    cursor: not-allowed;
 }

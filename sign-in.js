@@ -1,129 +1,129 @@
-/* =========================
-   CART COUNTER
-========================= */
+// /* =========================
+//    CART COUNTER
+// ========================= */
 
-const cartCount = document.getElementById("cart-count");
+// const cartCount = document.getElementById("cart-count");
 
-let count = localStorage.getItem("cartCount");
+// let count = localStorage.getItem("cartCount");
 
-if(count === null){
-    count = 0;
-}
+// if(count === null){
+//     count = 0;
+// }
 
-if(cartCount){
-    cartCount.textContent = count;
-}
+// if(cartCount){
+//     cartCount.textContent = count;
+// }
 
-/* =========================
-   SIGN IN FORM
-========================= */
+// /* =========================
+//    SIGN IN FORM
+// ========================= */
 
-const signInForm =
-document.getElementById("signin-form");
+// const signInForm =
+// document.getElementById("signin-form");
 
-if(signInForm){
+// if(signInForm){
 
-    signInForm.addEventListener("submit", function(e){
+//     signInForm.addEventListener("submit", function(e){
 
-        e.preventDefault();
+//         e.preventDefault();
 
-        const email =
-        document.getElementById("email").value;
+//         const email =
+//         document.getElementById("email").value;
 
-        const password =
-        document.getElementById("password").value;
+//         const password =
+//         document.getElementById("password").value;
 
-        if(email === "" || password === ""){
+//         if(email === "" || password === ""){
 
-            alert("Please fill all fields");
+//             alert("Please fill all fields");
 
-            return;
-        }
+//             return;
+//         }
 
-        localStorage.setItem("userEmail", email);
+//         localStorage.setItem("userEmail", email);
 
-        alert("Sign In Successful");
+//         alert("Sign In Successful");
 
-        window.location.href = "index.html";
+//         window.location.href = "index.html";
 
-    });
+//     });
 
-}
+// }
 
-/* =========================
-   CREATE ACCOUNT BUTTON
-========================= */
+// /* =========================
+//    CREATE ACCOUNT BUTTON
+// ========================= */
 
-const createBtn =
-document.querySelector(".create-btn");
+// const createBtn =
+// document.querySelector(".create-btn");
 
-if(createBtn){
+// if(createBtn){
 
-    createBtn.addEventListener("click", () => {
+//     createBtn.addEventListener("click", () => {
 
-        alert("Create Account Page Coming Soon");
+//         alert("Create Account Page Coming Soon");
 
-    });
+//     });
 
-}
+// }
 
-/* =========================
-   CART BUTTON
-========================= */
+// /* =========================
+//    CART BUTTON
+// ========================= */
 
-const cartBtn =
-document.querySelector(".cart");
+// const cartBtn =
+// document.querySelector(".cart");
 
-if(cartBtn){
+// if(cartBtn){
 
-    cartBtn.addEventListener("click", () => {
+//     cartBtn.addEventListener("click", () => {
 
-        window.location.href = "cart.html";
+//         window.location.href = "cart.html";
 
-    });
+//     });
 
-}
+// }
 
-/* =========================
-   REMEMBER ME
-========================= */
+// /* =========================
+//    REMEMBER ME
+// ========================= */
 
-const rememberCheckbox =
-document.querySelector('input[type="checkbox"]');
+// const rememberCheckbox =
+// document.querySelector('input[type="checkbox"]');
 
-if(rememberCheckbox){
+// if(rememberCheckbox){
 
-    const savedEmail =
-    localStorage.getItem("savedEmail");
+//     const savedEmail =
+//     localStorage.getItem("savedEmail");
 
-    if(savedEmail){
+//     if(savedEmail){
 
-        document.getElementById("email").value =
-        savedEmail;
+//         document.getElementById("email").value =
+//         savedEmail;
 
-        rememberCheckbox.checked = true;
-    }
+//         rememberCheckbox.checked = true;
+//     }
 
-    rememberCheckbox.addEventListener("change", () => {
+//     rememberCheckbox.addEventListener("change", () => {
 
-        const email =
-        document.getElementById("email").value;
+//         const email =
+//         document.getElementById("email").value;
 
-        if(rememberCheckbox.checked){
+//         if(rememberCheckbox.checked){
 
-            localStorage.setItem(
-                "savedEmail",
-                email
-            );
+//             localStorage.setItem(
+//                 "savedEmail",
+//                 email
+//             );
 
-        }else{
+//         }else{
 
-            localStorage.removeItem(
-                "savedEmail"
-            );
+//             localStorage.removeItem(
+//                 "savedEmail"
+//             );
 
-        }
+//         }
 
-    });
+//     });
 
-}
+// }
