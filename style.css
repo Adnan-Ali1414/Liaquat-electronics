@@ -510,3 +510,8 @@ body{
     text-decoration:none;
     color:white;
 }
+.product-card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+}

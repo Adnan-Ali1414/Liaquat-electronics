@@ -4,7 +4,7 @@
 
 const cartCount = document.getElementById("cart-count");
 
-let count = 0;
+let count = localStorage.getItem("cartCount") || 0;
 
 if(cartCount){
     cartCount.textContent = count;
@@ -76,6 +76,27 @@ detailButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
+        const card =
+        button.closest(".product-card");
+
+        const product = {
+
+            name:
+            card.querySelector("h3").textContent,
+
+            price:
+            card.querySelector("p").textContent,
+
+            image:
+            card.querySelector("img").getAttribute("src")
+
+        };
+
+        localStorage.setItem(
+            "selectedProduct",
+            JSON.stringify(product)
+        );
+
         window.location.href =
         "product-detail.html";
 
@@ -96,3 +117,16 @@ productCards.forEach(card => {
     });
 
 });
+const cart =
+document.querySelector(".cart");
+
+if(cart){
+
+    cart.addEventListener("click", () => {
+
+        window.location.href =
+        "cart.html";
+
+    });
+
+}
