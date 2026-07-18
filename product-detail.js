@@ -19,6 +19,28 @@ const products = {
 "ECM-6500 PLUS FAST COOL":{
     price:"Rs. 35,100",
     brand:"Super Asia",
+
+    description: `
+Features:
+• Top loading cooling box for Re-Freezable ice packs included for ultimate cooling
+• 6 Re-Freezable ICE packs for extra cooling
+• Designed for performance with powerful air flow & cooling efficiency
+• Powerful & energy efficient motor
+• High efficiency anti-bacterial three sides honeycomb evaporative pad for optimum cooling
+• Powerful air throw with auto swing for uniform cooling in the room
+• Fan based cooling for efficient circulation of air
+• Two speed fan control to adjust air flow according to the requirement
+• Shock & rust proof plastic body
+• Large water tank capacity for longer cooling
+• Maintain continuous water supply system with float valve
+• Low maintenance & long lasting life
+• Strong Wheels with four way movement for convenient & easy mobility
+
+Specifications:
+Net Weight: 33kg
+Gross Weight: 36kg
+    `,
+
     images:[
         "images/cooler-ecm-6500-plus.1.png",
         "images/cooler-ecm-6500-plus.2.png",
@@ -152,6 +174,7 @@ const products = {
 
 };
 
+
 /* =========================
    LOAD PRODUCT
 ========================= */
@@ -175,6 +198,16 @@ if(selectedProduct){
         document.getElementById("product-brand")
         .textContent =
         "Brand: " + productData.brand;
+
+        const descriptionBox =
+        document.getElementById("product-description");
+
+        if(descriptionBox && productData.description){
+
+            descriptionBox.innerHTML =
+            productData.description.replace(/\n/g,"<br>");
+
+        }
 
         const mainImage =
         document.getElementById("main-image");
